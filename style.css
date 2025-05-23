@@ -1,0 +1,98 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(270deg, #ff6a00, #ee0979, #00f260, #0575e6);
+  background-size: 800% 800%;
+  animation: gradientAnimation 20s ease infinite;
+  color: #fff;
+  overflow: hidden;
+  padding: 20px;
+}
+
+@keyframes gradientAnimation {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 20px;
+  padding: 3rem 4rem;
+  box-shadow:
+    0 0 10px rgba(255, 255, 255, 0.15),
+    0 0 40px rgba(255, 255, 255, 0.1),
+    inset 0 0 60px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  width: 90%;         
+  max-width: 600px;   
+  min-width: 320px;   
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  margin: 20px auto;  
+  box-sizing: border-box;
+}
+
+
+h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1.8rem;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.clock {
+  font-weight: 700;
+  user-select: none;
+  text-shadow:
+    0 0 8px #ffd700,
+    0 0 20px #ffd700,
+    0 0 30px #ffae00;
+  color: #fff;
+}
+
+#time {
+  font-size: 4rem;
+  letter-spacing: 6px;
+  margin-bottom: 0.6rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#date, #day {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+  color: #ffeb99;
+  text-shadow: 0 0 6px rgba(255, 235, 153, 0.7);
+  font-weight: 600;
+}
+
+@media (max-width: 450px) {
+  .container {
+    padding: 2rem 2.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #time {
+    font-size: 3rem;
+    letter-spacing: 4px;
+  }
+
+  #date, #day {
+    font-size: 1.1rem;
+  }
+}
